@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2021/12/04 11:16:49 by wdebotte         ###   ########.fr        #
+#    Updated: 2021/12/04 18:19:10 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,12 +30,12 @@ SRCS_BONUS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 
 OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
 
-CC		= gcc
+CC		= cc
 RM		= rm -rf
 CFLAGS		= -Wall -Wextra -Werror
 
 .c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
 			ar -rc ${NAME} ${OBJS}
