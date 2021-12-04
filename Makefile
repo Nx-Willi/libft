@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2021/12/01 17:34:48 by wdebotte         ###   ########.fr        #
+#    Updated: 2021/12/04 11:16:49 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ RM		= rm -rf
 CFLAGS		= -Wall -Wextra -Werror
 
 .c.o:
-			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
 			ar -rc ${NAME} ${OBJS}
