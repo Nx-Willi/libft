@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:33:55 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/12/01 17:38:53 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/08 08:57:53 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 //----- Memory Stock -----
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t size);
