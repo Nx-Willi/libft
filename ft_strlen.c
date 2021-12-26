@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:32:41 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/24 12:32:43 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:52:26 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	int	size;
 
 	size = 0;
-	while (str[size] != '\0')
+	while (*(str++))
 		size++;
 	return (size);
 }

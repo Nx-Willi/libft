@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 14:15:00 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/30 11:39:29 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:47:02 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	if (s == NULL)
 		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		(*f)(i, s + i);
-		i++;
-	}
+	i = -1;
+	while (s[++i] != '\0')
+		f(i, s + i);
 }

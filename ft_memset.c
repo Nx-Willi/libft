@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:32:18 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/25 11:08:21 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:34:49 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	str = s;
 	while (i++ < n)
-		*str++ = (unsigned char)c;
+		*(str++) = (unsigned char)c;
 	return (s);
 }

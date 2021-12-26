@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 14:10:28 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/30 13:58:59 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 18:07:41 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *str, char const *charset)
 	char	*buffer;
 
 	if (str == NULL)
-		return (ft_strdup(""));
+		return (NULL);
 	if (charset == NULL)
 		return (ft_strdup(str));
 	i = 0;
@@ -42,9 +42,9 @@ char	*ft_strtrim(char const *str, char const *charset)
 	while (i >= start && ft_is_charset(str[i], charset))
 		i--;
 	end = i;
-	buffer = (char *)malloc(sizeof(char) * (end - start) + 2);
+	buffer = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (buffer == NULL)
-		return (ft_strdup(""));
+		return (NULL);
 	i = 0;
 	while (start <= end)
 		buffer[i++] = str[start++];

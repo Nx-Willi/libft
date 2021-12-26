@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 08:45:33 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/30 12:16:24 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:34:04 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t size)
 {
-	size_t				n;
-	unsigned char		*buffer_dst;
-	unsigned const char	*buffer_src;
+	size_t			n;
+	unsigned char	*buffer_dst;
+	unsigned char	*buffer_src;
 
 	buffer_dst = (unsigned char *)dst;
 	buffer_src = (unsigned char *)src;

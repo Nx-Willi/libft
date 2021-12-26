@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 15:53:40 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/12/01 17:41:00 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:25:10 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		if (!begin)
 		{
-			buffer_lst = ft_lstnew((*f)(lst->content));
+			buffer_lst = ft_lstnew(f(lst->content));
 			begin = buffer_lst;
 		}
 		else
 		{
-			buffer_lst->next = ft_lstnew((*f)(lst->content));
+			buffer_lst->next = ft_lstnew(f(lst->content));
 			buffer_lst = buffer_lst->next;
 		}
 		lst = lst->next;

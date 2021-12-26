@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 13:48:00 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/30 11:58:44 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 18:01:12 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 
 	if (s2[0] == '\0')
 		return ((char *)s1);
-	i = 0;
-	j = 0;
-	while (s1[i] != '\0' && i < n)
+	i = -1;
+	while (s1[++i] != '\0' && i < n)
 	{
+		j = 0;
 		if (s1[i] == s2[j])
 		{
 			while ((s1[i + j] != '\0' && s2[j] != '\0')
@@ -31,8 +31,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 			if (s2[j] == '\0')
 				return ((char *)s1 + i);
 		}
-		j = 0;
-		i++;
 	}
 	return (NULL);
 }

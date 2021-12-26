@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:41:53 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/29 10:28:53 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:10:44 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,17 @@ static int	ft_is_whitespace(char c)
 
 int	ft_atoi(const char *str)
 {
-	int			i;
 	int			is_negativ;
 	long int	number;
 
-	i = 0;
 	number = 0;
 	is_negativ = 1;
-	while (str[i] != '\0' && ft_is_whitespace(str[i]))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
+	while (*str && ft_is_whitespace(*str))
+		str++;
+	if (*str && (*str == '-' || *str == '+'))
+		if (*(str++) == '-')
 			is_negativ = -is_negativ;
-		i++;
-	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-	{
-		number = number * 10 + str[i] - 48;
-		i++;
-	}
+	while (*str && (*str >= '0' && *str <= '9'))
+		number = number * 10 + *(str++) - 48;
 	return (number * is_negativ);
 }

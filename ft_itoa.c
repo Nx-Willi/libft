@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 08:35:23 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/29 12:07:51 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 18:14:31 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 
 	long_n = n;
 	n = ft_sizebuffer(long_n);
-	number = malloc(sizeof(char) * n + 1);
+	number = malloc(sizeof(char) * (n + 1));
 	if (number == NULL)
 		return (NULL);
 	number[n--] = '\0';

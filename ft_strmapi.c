@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:33:12 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/29 17:03:15 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 18:11:28 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*buffer;
 
 	if (!s)
-		return (ft_strdup(""));
-	buffer = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+		return (NULL);
+	buffer = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (buffer == NULL)
 		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		buffer[i] = (*f)(i, s[i]);
-		i++;
-	}
+	i = -1;
+	while (s[++i] != '\0')
+		buffer[i] = f(i, s[i]);
 	buffer[i] = '\0';
 	return (buffer);
 }

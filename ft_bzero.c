@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:30:57 by wdebotte          #+#    #+#             */
-/*   Updated: 2021/11/25 11:08:00 by wdebotte         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:12:42 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*str;
 
 	i = 0;
-	str = s;
+	str = (unsigned char *)s;
 	while (i++ < n)
-		*str++ = 0;
+		*(str++) = 0;
 }
