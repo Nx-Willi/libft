@@ -6,9 +6,15 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2022/01/08 22:03:11 by wdebotte         ###   ########.fr        #
+#    Updated: 2022/01/11 10:52:01 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+CYAN		= \033[0m\033[96m
+GREEN		= \033[1m\033[92m
+COLORRESET	= @echo "\033[0m"
+
+PREFIX		= ${GREEN}=> ${CYAN}[${GREEN}Libft${CYAN}]
 
 NAME		= libft.a
 
@@ -41,23 +47,46 @@ SRCS 		= srcs/str/ft_isalpha.c srcs/str/ft_isdigit.c srcs/str/ft_isalnum.c \
 OBJS		= ${SRCS:.c=.o}
 
 CC			= clang
-RM			= rm -rf
 CFLAGS		= -Wall -Wextra -Werror
 
+RM			= rm -rf
+
+NORM		= norminette
+FLAGC		= -R CheckForbiddenSourceHeader
+FLAGH		= -R CheckDefine
+
+all:		strcompile ${NAME}
+
+strcompile:
+				@echo "${PREFIX} Compiling all ${GREEN}.c ${CYAN}to ${GREEN}.o ${CYAN}..."
+
 .c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+				${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
+				${COLORRESET}
+				@echo "${PREFIX} Making ${GREEN}${NAME} ${CYAN}library ..."
 				ar -rc ${NAME} ${OBJS}
-
-all:		${NAME}
+				${COLORRESET}
 
 clean:
+				@echo "${PREFIX} Cleaning ${GREEN}Libft ${CYAN}..."
 				${RM} ${OBJS}
+				${COLORRESET}
 
 fclean:		clean
+				@echo "${PREFIX} Removing ${GREEN}${NAME} ${CYAN}library ..."
 				${RM} ${NAME}
+				${COLORRESET}
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+norminette:
+				@echo "${PREFIX} Checking norminette for ${GREEN}.c ${CYAN}files ..."
+				${NORM} ${FLAGC} ${SRCS}
+				${COLORRESET}
+				@echo "${PREFIX} Checking norminette for ${GREEN}.h ${CYAN}files ..."
+				${NORM} ${FLAGH} ${HEADER}
+				${COLORRESET}
+
+.PHONY:		all clean fclean re norminette
