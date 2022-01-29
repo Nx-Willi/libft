@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:33:55 by wdebotte          #+#    #+#             */
-/*   Updated: 2022/01/11 13:41:09 by wdebotte         ###   ########.fr       */
+/*   Updated: 2022/01/29 17:36:45 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,10 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-//----- Other Stock -----
+//----- Int Stock -----
 
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
+void	ft_putnbr(int nbr);
 
 #endif

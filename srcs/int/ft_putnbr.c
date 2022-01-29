@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wdebotte <wdebotte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 19:42:46 by wdebotte          #+#    #+#             */
-/*   Updated: 2022/01/29 17:44:47 by wdebotte         ###   ########.fr       */
+/*   Created: 2022/01/29 17:37:02 by wdebotte          #+#    #+#             */
+/*   Updated: 2022/01/29 17:37:45 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../headers/libft.h"
 
-void	ft_putstr(const char *str)
+void	ft_putnbr(int nbr)
 {
-	if (str == NULL)
-		return ;
-	write(1, str, ft_strlen(str));
+	char	*s_nbr;
+
+	s_nbr = ft_itoa(nbr);
+	ft_putstr(s_nbr);
 }

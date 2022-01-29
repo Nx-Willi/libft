@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2022/01/17 10:45:33 by wdebotte         ###   ########.fr        #
+#    Updated: 2022/01/29 17:36:21 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ SRCS 		= srcs/str/ft_isalpha.c srcs/str/ft_isdigit.c srcs/str/ft_isalnum.c \
 			srcs/lst/ft_lstdelone.c srcs/lst/ft_lstclear.c srcs/lst/ft_lstlast.c \
 			srcs/lst/ft_lstnew.c srcs/lst/ft_lstmap.c \
 			\
-			srcs/othr/ft_atoi.c srcs/othr/ft_itoa.c \
+			srcs/int/ft_atoi.c srcs/int/ft_itoa.c srcs/int/ft_putnbr.c \
 			\
 			srcs/ft_printf/ft_printf.c srcs/ft_printf/ft_printf_putnbr.c \
 			srcs/ft_printf/ft_printf_strstuff.c
