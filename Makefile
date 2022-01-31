@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2022/01/31 16:14:21 by wdebotte         ###   ########.fr        #
+#    Updated: 2022/01/31 16:44:14 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ SRCS 		= srcs/str/ft_isalpha.c \
 			\
 			srcs/int/ft_atoi_base.c \
 			srcs/int/ft_atoi.c \
+			srcs/int/ft_itoa_base.c \
 			srcs/int/ft_itoa.c \
 			srcs/int/ft_putnbr.c \
 			\
