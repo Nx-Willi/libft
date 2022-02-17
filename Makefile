@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2022/02/10 16:41:50 by wdebotte         ###   ########.fr        #
+#    Updated: 2022/02/17 15:23:00 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ SRCS 		= srcs/str/ft_isalpha.c \
 
 OBJS		= ${SRCS:.c=.o}
 
-HEADERS		= headers/libft.h headers/ft_printf.h
+HEADERS		= includes/libft.h includes/ft_printf.h
 
 CC			= clang
 CFLAGS		= -Wall -Wextra -Werror
