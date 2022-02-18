@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2022/02/18 16:16:30 by wdebotte         ###   ########.fr        #
+#    Updated: 2022/02/18 16:33:25 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,9 @@ YELLOW	= \033[93m
 NAME		= libft.a
 
 PATHSRCS	= ./srcs/
+PATHHEADERS	= ./includes/
+PATHNULL	= /dev/null
+
 SRCS 		= ${PATHSRCS}str/ft_isalpha.c \
 			${PATHSRCS}str/ft_isdigit.c\
 			${PATHSRCS}str/ft_isalnum.c \
@@ -90,7 +93,6 @@ SRCS 		= ${PATHSRCS}str/ft_isalpha.c \
 
 OBJS		= ${SRCS:.c=.o}
 
-PATHHEADERS	= ./includes/
 HEADERS		= ${PATHHEADERS}libft.h \
 			${PATHHEADERS}ft_printf.h
 
@@ -103,8 +105,6 @@ RM			= rm -rf
 NORM		= norminette
 FLAGC		= -R CheckForbiddenSourceHeader
 FLAGH		= -R CheckDefine
-
-PATHNULL	= /dev/null
 
 ################################################################################
 # => RULES
