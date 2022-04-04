@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:33:55 by wdebotte          #+#    #+#             */
-/*   Updated: 2022/02/08 14:14:17 by wdebotte         ###   ########.fr       */
+/*   Updated: 2022/04/04 10:28:46 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		ft_isspace(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		is_whitespace(int c);
 
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *str, int c);
@@ -96,10 +97,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //----- Int Stock -----
 
-int		ft_atoi_base(const char *str, const char *base);
-int		ft_atoi(const char *str);
-char	*ft_itoa_base(int nbr, char *base);
-char	*ft_itoa(int n);
-void	ft_putnbr(int nbr);
+int			ft_atoi_base(const char *str, const char *base);
+int			ft_atoi(const char *str);
+
+char		*ft_itoa_base(int nbr, char *base);
+char		*ft_itoa(int n);
+
+void		ft_putnbr(int nbr);
+long int	ft_atoli(const char *str);
 
 #endif

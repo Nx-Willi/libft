@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2022/02/18 16:33:25 by wdebotte         ###   ########.fr        #
+#    Updated: 2022/04/04 10:24:45 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRCS 		= ${PATHSRCS}str/ft_isalpha.c \
 			${PATHSRCS}str/ft_striteri.c \
 			${PATHSRCS}str/ft_putchar.c \
 			${PATHSRCS}str/ft_putstr.c \
+			${PATHSRCS}str/iswhitespace.c \
 			\
 			${PATHSRCS}mem/ft_memcmp.c \
 			${PATHSRCS}mem/ft_bzero.c \
@@ -83,6 +84,7 @@ SRCS 		= ${PATHSRCS}str/ft_isalpha.c \
 			\
 			${PATHSRCS}int/ft_atoi_base.c \
 			${PATHSRCS}int/ft_atoi.c \
+			${PATHSRCS}int/ft_atoli.c \
 			${PATHSRCS}int/ft_itoa_base.c \
 			${PATHSRCS}int/ft_itoa.c \
 			${PATHSRCS}int/ft_putnbr.c \
