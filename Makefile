@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2022/04/04 10:24:45 by wdebotte         ###   ########.fr        #
+#    Updated: 2022/04/04 10:45:21 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -134,10 +134,10 @@ re:			fclean all
 
 norminette:
 				@echo "${BOLD}${YELLOW}Norminette:${END}\tAll .c files"
-				@${NORM} ${FLAGC} ${SRCS} >${PATHNULL}
-				@echo "${BOLD}${GREEN}Norminette:${END}\tOK !"
+				${NORM} ${FLAGC} ${SRCS}
+				@echo "${BOLD}${GREEN}Norminette:${END}\tOK !\n"
 				@echo "${BOLD}${YELLOW}Norminette:${END}\tAll .h files"
-				@${NORM} ${FLAGH} ${HEADERS} >${PATHNULL}
+				${NORM} ${FLAGH} ${HEADERS}
 				@echo "${BOLD}${GREEN}Norminette:${END}\tOK !"
 
 .PHONY:		all clean fclean re norminette
