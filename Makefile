@@ -6,7 +6,7 @@
 #    By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 08:31:56 by wdebotte          #+#    #+#              #
-#    Updated: 2022/04/04 10:45:21 by wdebotte         ###   ########.fr        #
+#    Updated: 2022/05/05 23:15:33 by wdebotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,14 +89,14 @@ SRCS 		= ${PATHSRCS}str/ft_isalpha.c \
 			${PATHSRCS}int/ft_itoa.c \
 			${PATHSRCS}int/ft_putnbr.c \
 			\
-			${PATHSRCS}ft_printf/ft_printf.c \
-			${PATHSRCS}ft_printf/ft_printf_putnbr.c \
-			${PATHSRCS}ft_printf/ft_printf_strstuff.c
+			${PATHSRCS}printf/printf.c \
+			${PATHSRCS}printf/putnbrs.c \
+			${PATHSRCS}printf/utils.c
 
 OBJS		= ${SRCS:.c=.o}
 
 HEADERS		= ${PATHHEADERS}libft.h \
-			${PATHHEADERS}ft_printf.h
+			${PATHHEADERS}printf.h
 
 CC			= clang
 CFLAGS		= -Wall -Wextra -Werror

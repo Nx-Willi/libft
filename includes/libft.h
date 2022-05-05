@@ -6,7 +6,7 @@
 /*   By: wdebotte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:33:55 by wdebotte          #+#    #+#             */
-/*   Updated: 2022/04/04 10:46:47 by wdebotte         ###   ########.fr       */
+/*   Updated: 2022/05/05 23:12:10 by wdebotte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #  define BUFFER_SIZE 10
 # endif
 
-# include "ft_printf.h"
+# include "printf.h"
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
