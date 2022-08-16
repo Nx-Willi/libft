@@ -6,7 +6,7 @@
 /*   By: william <william@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:33:55 by wdebotte          #+#    #+#             */
-/*   Updated: 2022/08/16 19:23:41 by william          ###   ########.fr       */
+/*   Updated: 2022/08/16 19:27:06 by william          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int			ft_isspace(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
-int			is_whitespace(int c);
+int			is_strnum(char *str);
 
 char		*ft_strdup(const char *s);
 char		*ft_strchr(const char *str, int c);
