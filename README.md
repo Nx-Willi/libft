@@ -65,6 +65,6 @@ To test this project the following testers were usefull:
 - https://github.com/Tripouille/libftTester
 - https://github.com/alelievr/libft-unit-test
 
-## Note
+## Score
 
 [![wdebotte's 42 Libft Score](https://badge42.vercel.app/api/v2/cl2zu1sil002509mf9zd91hy6/project/2415339)](https://github.com/JaeSeoKim/badge42)
